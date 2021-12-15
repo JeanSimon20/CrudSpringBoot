@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: area
+  name: area-service
+  namespace: gitlab-kubernetes-agent
+spec:
+  selector:
+    app: area-service
+  ports:
+    - port: 8080
+      targetPort: 8080
+  type: NodePort
